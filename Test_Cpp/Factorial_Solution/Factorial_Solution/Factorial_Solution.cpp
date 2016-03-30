@@ -18,7 +18,8 @@ int main()
 
 int fac(int n)
 {
-	static int f = 1;
+	//static int f = 1;
+	register int f = 1;
 	f = f * n;
 	return f;
 }
