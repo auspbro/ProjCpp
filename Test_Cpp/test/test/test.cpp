@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-
+#include <stdlib.h>
 #include <stdio.h>		//#°üº¬<stdio.h>
 
 /*
@@ -27,4 +27,5 @@ int main(int argc, char const *argv[])
 		printf("±à¼­%s\n", argv[1]);
 	}
 	return 0;
+	system("pause");
 }
