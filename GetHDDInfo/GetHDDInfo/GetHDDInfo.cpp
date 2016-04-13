@@ -69,7 +69,7 @@ void GetHDDInformation()
 	}
 
 	GetOneInforByWMI("Win32_DiskDrive", "Size", 1, Buff);
-	strncpy_s(HDD_Size, Buff, strlen(Buff) - 6);
+	strncpy(HDD_Size, Buff, strlen(Buff) - 6);
 
 	GetOneInforByWMI("Win32_PhysicalMedia", "SerialNumber", 1, HDD_SerialNumber);
 }
