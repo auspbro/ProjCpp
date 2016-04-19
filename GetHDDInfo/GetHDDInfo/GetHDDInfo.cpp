@@ -69,7 +69,7 @@ void GetHDDInformation()
 	}
 
 	GetOneInforByWMI("Win32_DiskDrive", "Size", 1, Buff);
-	strncpy(HDD_Size, Buff, strlen(Buff) - 6);
+	strncpy_s(HDD_Size, Buff, strlen(Buff) - 6);
 
 	GetOneInforByWMI("Win32_PhysicalMedia", "SerialNumber", 1, HDD_SerialNumber);
 }
@@ -111,13 +111,13 @@ void ShowHelp()
 int _tmain(int argc, _TCHAR* argv[])
 {
 
-	strncpy(Program_Name, argv[0], strlen(argv[0]));
+	strncpy_s(Program_Name, argv[0], strlen(argv[0]));
 
 	if (argc == 2)
 	{
-		if (!stricmp(argv[1], "/show"))
+		if (!_stricmp(argv[1], "/show"))
 			OutputFlag = 1;
-		else if (!stricmp(argv[1], "/set"))
+		else if (!_stricmp(argv[1], "/set"))
 			OutputFlag = 2;
 		else
 		{
